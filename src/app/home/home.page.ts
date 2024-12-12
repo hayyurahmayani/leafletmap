@@ -17,8 +17,9 @@ export class HomePage {
 
   ionViewDidEnter() {
     // Create the map
-    this.map = L.map('mapId').setView([-7.78031726531913, 110.36799547304071], 11);
+    this.map = L.map('mapId').setView([-2.50, 117.90], 5);
 
+    
    // Basemap
    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
@@ -69,41 +70,157 @@ var baseMaps = {
 
 L.control.layers(baseMaps).addTo(this.map);
 
+
+
 // Marker custom dengan icon sendiri
     const customIcon = L.icon({
-      iconUrl: 'assets/icon/marker.png', // Path ke file icon
+      iconUrl: 'assets/icon/mountain.png', // Path ke file icon
       iconSize: [38, 38], // Ukuran ikon
       iconAnchor: [19, 38], // Anchor point di bawah ikon
       popupAnchor: [0, -38], // Posisi popup relatif terhadap ikon
     });
 
     // Tambahkan marker dengan ikon custom
-    this.marker = L.marker([-7.7954472430867074, 110.38384628747343], { icon: customIcon }).addTo(this.map);
+    this.marker = L.marker([3.2324749597164226, 98.38754482701681], { icon: customIcon }).addTo(this.map);
     this.marker.bindPopup(`
-        <b>Stadion Mandala Krida</b>
-        <br>
-        Gedung Olahraga
+        <b>Mount Sinabung</b>
         <br>
         <div style="text-align: center;">
-    <img src="https://storage.googleapis.com/seo-cms/assets/sejarah_stadion_mandala_krida_423a1a3f4e/sejarah_stadion_mandala_krida_423a1a3f4e.jpg" alt="Stadion Mandala Krida" width="100" height="100"></div>
-    `).openPopup();
+    <img src="assets/img/sinabung.jpg" width="100" height="100"></div>
+    `);
 
-    // Marker kedua
-const marker2 = L.marker([-7.749924850440371, 110.41804480452821], { icon: customIcon }).addTo(this.map);
+const marker2 = L.marker([-0.3914033374162823, 100.45565477521075], { icon: customIcon }).addTo(this.map);
 marker2.bindPopup(`
-  <b>Stadion Maguwoharjo</b><br>
-  Gedung Olahraga<br>
+  <b>Mount Marapi</b>
+  <br>
   <div style="text-align: center;">
-    <img src="https://yogyapos.com/images/berita/yogya-pos-stadion-maguwoharjo-segera-dibenahi-ini-agendanya-52.jpeg" alt="Stadion Maguwoharjo" width="100" height="100">
+    <img src="assets/img/marapi.jpeg" width="100" height="100">
   </div>
 `);
 
-const marker3 = L.marker([-7.875349, 110.380186], { icon: customIcon }).addTo(this.map);
+const marker3 = L.marker([-1.6952935163343357, 101.26399306270585], { icon: customIcon }).addTo(this.map);
 marker3.bindPopup(`
-  <b>Stadion Sultan Agung</b><br>
-  Gedung Olahraga<br>
+  <b>Mount Kerinci</b>
+  <br>
   <div style="text-align: center;">
-    <img src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/223/2024/04/16/stadion-sultan-agung-bantul-1885040055.jpg" alt="Stadion Sultan Agung" width="100" height="100">
+    <img src="assets/img/kerinci.jpg" width="100" height="100">
+  </div>
+`);
+
+const marker4 = L.marker([-6.101306529862345, 105.42294431618747], { icon: customIcon }).addTo(this.map);
+marker4.bindPopup(`
+  <b>Mount Anak Krakatau</b>
+  <br>
+  <div style="text-align: center;">
+    <img src="assets/img/krakatau.jpg" width="100" height="100">
+  </div>
+`);
+
+const marker5 = L.marker([-7.5393984070502, 110.44572403183534], { icon: customIcon }).addTo(this.map);
+marker5.bindPopup(`
+  <b>Mount Merapi</b>
+  <br>
+  <div style="text-align: center;">
+    <img src="assets/img/merapi.jpg" width="100" height="100">
+  </div>
+`);
+
+const marker6 = L.marker([-8.106654759435385, 112.92249326265545], { icon: customIcon }).addTo(this.map);
+marker6.bindPopup(`
+  <b>Mount Semeru</b>
+  <br>
+  <div style="text-align: center;">
+    <img src="assets/img/semeru.jpg" width="100" height="100">
+  </div>
+`);
+
+const marker7 = L.marker([-7.941898271388679, 112.95305504727213], { icon: customIcon }).addTo(this.map);
+marker7.bindPopup(`
+  <b>Mount Bromo</b>
+  <br>
+  <div style="text-align: center;">
+    <img src="assets/img/bromo.jpeg" width="100" height="100">
+  </div>
+`);
+
+const marker8 = L.marker([-8.342034658991127, 115.50765646147686], { icon: customIcon }).addTo(this.map);
+marker8.bindPopup(`
+  <b>Mount Agung</b>
+  <br>
+  <div style="text-align: center;">
+    <img src="assets/img/agung.jpg" width="100" height="100">
+  </div>
+`);
+
+const marker9 = L.marker([-8.410175114942641, 116.4569352439802], { icon: customIcon }).addTo(this.map);
+marker9.bindPopup(`
+  <b>Mount Rinjani</b>
+  <br>
+  <div style="text-align: center;">
+    <img src="assets/img/rinjani.jpg" width="100" height="100">
+  </div>
+`);
+
+const marker10 = L.marker([-8.195543299587802, 119.06962002312902], { icon: customIcon }).addTo(this.map);
+marker10.bindPopup(`
+  <b>Mount Sangeang Api</b>
+  <br>
+  <div style="text-align: center;">
+    <img src="assets/img/sangeang.jpg" width="100" height="100">
+  </div>
+`);
+
+const marker11 = L.marker([-8.537024998595552, 122.76752523895581], { icon: customIcon }).addTo(this.map);
+marker11.bindPopup(`
+  <b>Mount Lewotobi Laki-laki</b>
+  <br>
+  <div style="text-align: center;">
+    <img src="assets/img/lewotobi.jpg" width="100" height="100">
+  </div>
+`);
+
+const marker12 = L.marker([-8.493885465711026, 124.11984728912356], { icon: customIcon }).addTo(this.map);
+marker12.bindPopup(`
+  <b>Mount Sirung</b>
+  <br>
+  <div style="text-align: center;">
+    <img src="assets/img/sirung.jpeg" width="100" height="100">
+  </div>
+`);
+
+const marker13 = L.marker([-4.521781868465779, 129.87921325825235], { icon: customIcon }).addTo(this.map);
+marker13.bindPopup(`
+  <b>Mount Banda Api</b>
+  <br>
+  <div style="text-align: center;">
+    <img src="assets/img/banda.jpg" width="100" height="100">
+  </div>
+`);
+
+const marker14 = L.marker([0.8098531640344914, 127.33307573861428], { icon: customIcon }).addTo(this.map);
+marker14.bindPopup(`
+  <b>Mount Gamalama</b>
+  <br>
+  <div style="text-align: center;">
+    <img src="assets/img/gamalama.jpg" width="100" height="100">
+  </div>
+`);
+
+const marker15 = L.marker([1.494925276250555, 127.63564871179346], { icon: customIcon }).addTo(this.map);
+marker15.bindPopup(`
+  <b>Mount Ibu</b>
+  <br>
+  <div style="text-align: center;">
+    <img src="assets/img/ibu.jpg" width="100" height="100">
+  </div>
+`);
+
+const marker16 = L.marker([2.7818190954385957, 125.40640903855659], { icon: customIcon }).addTo(this.map);
+marker16.bindPopup(`
+  <b>Mount Karangetang</b>
+  <br>
+  <div style="text-align: center;">
+    <img src="assets/img/karangetang.jpg" width="100" height="100">
   </div>
 `);
 
